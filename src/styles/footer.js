@@ -7,8 +7,9 @@ const FooterWrap = styled.footer`
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
-  padding: 0px 16px 0px 4px;
+  padding: 0px 16px;
   background: #f0edf1;
+
   button {
     display: flex;
     align-items: center;
@@ -16,7 +17,7 @@ const FooterWrap = styled.footer`
     justify-content: center;
     padding: 16px;
     border: 0;
-    background: var(--m-3-sys-light-secondary-container, #dfe1f9);
+    background: #dfe1f9;
     border-radius: 16px;
   }
 `;

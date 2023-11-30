@@ -1,12 +1,16 @@
 import React from "react";
 import { FooterWrap } from "../styles/footer";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ children }) => {
   return (
     <FooterWrap>
-      <img src="images/bt_ft.svg" />
+      <Link to="/home">
+        <img src={process.env.PUBLIC_URL + "/images/bt_ft.svg"} />
+      </Link>
+      <span>{children}</span>
       <button>
-        <img src="images/bt_add.svg" />
+        <img src={process.env.PUBLIC_URL + "/images/bt_add.svg"} />
       </button>
     </FooterWrap>
   );

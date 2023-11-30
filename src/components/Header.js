@@ -4,12 +4,12 @@ import { TopBar } from "../styles/header";
 const Header = ({ children }) => {
   return (
     <TopBar>
-      <button>
-        <img src="images/bt_list.svg" />
+      <button onClick={() => {}}>
+        <img src={process.env.PUBLIC_URL + "/images/bt_list.svg"} />
       </button>
       <h2>{children}</h2>
-      <button>
-        <img src="images/bt_login.svg" />
+      <button onClick={() => {}}>
+        <img src={process.env.PUBLIC_URL + "/images/bt_login.svg"} />
       </button>
     </TopBar>
   );
