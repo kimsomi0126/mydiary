@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = ({ children }) => {
   return (
     <FooterWrap>
-      <Link to="/home">
+      <Link to="/">
         <img src={process.env.PUBLIC_URL + "/images/bt_ft.svg"} />
       </Link>
       <span>{children}</span>

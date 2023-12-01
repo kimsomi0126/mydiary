@@ -2,14 +2,19 @@ import React from "react";
 import Header from "../../components/Header";
 import Main from "../../components/Main";
 import Footer from "../../components/Footer";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const DiaryEdit = () => {
   const param = useParams();
-  console.log(param);
+  const navigate = useNavigate();
+  const handleClickMenu = () => {
+    navigate(-1);
+  };
   return (
     <>
-      <Header>Diary 수정</Header>
+      <Header handleClickMenu={handleClickMenu} icon="bt_back.svg">
+        Diary 수정
+      </Header>
       <Main>
         <h2 style={{ textAlign: "center" }}>
           다이어리 수정화면 {param.pk}번 수정

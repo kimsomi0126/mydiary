@@ -1,14 +1,22 @@
 import React from "react";
 import { TopBar } from "../styles/header";
 
-const Header = ({ children }) => {
+const Header = ({ children, handleClickMenu, icon }) => {
   return (
     <TopBar>
-      <button onClick={() => {}}>
-        <img src={process.env.PUBLIC_URL + "/images/bt_list.svg"} />
+      <button
+        onClick={() => {
+          handleClickMenu();
+        }}
+      >
+        <img
+          src={
+            process.env.PUBLIC_URL + `/images/${icon ? icon : "bt_list.svg"}`
+          }
+        />
       </button>
       <h2>{children}</h2>
-      <button onClick={() => {}}>
+      <button>
         <img src={process.env.PUBLIC_URL + "/images/bt_login.svg"} />
       </button>
     </TopBar>
